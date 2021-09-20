@@ -1,0 +1,39 @@
+body{
+    background-color:burlywood;
+}
+hr{
+    
+    border-style: dotted none none;
+    
+    
+    border-color: white;
+    width: 8%;
+    border-width: 5px;
+    
+}
+h1{
+    color:rebeccapurple;
+}
+h3{
+    color: rebeccapurple;
+}
+.python{
+    color:greenyellow;
+}
+.html{
+    color: red;
+}
+/*
+.python{
+    color:greenyellow;
+}
+*/
+#dp{
+    border-radius: 100%;
+}
+table:hover{
+    color: red;
+}
+.best:hover{
+    color: darkgreen;
+}

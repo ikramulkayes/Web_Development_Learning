@@ -9,8 +9,24 @@ while (count < 7){
 }
 //document.querySelector("button").addEventListener("click",drum)
 function drum(){
-    var cell = this.innerHTML
-    switch(cell){
+    var cell = this.innerHTML          //ditecting if the mouse was pressed on the image 
+    makesound(cell)
+    buttonAnimation(cell)
+
+    document.addEventListener("keypress",function(event){  //checking if the key was pressed or not 
+        makesound(event.key)
+        buttonAnimation(cell)
+    })
+
+
+
+
+
+
+    
+
+function makesound(cell){
+    switch(cell){       //switch method this is 
         case "w":
             var tom1 = new Audio("sounds/tom-1.mp3")
             tom1.play()
@@ -47,5 +63,17 @@ function drum(){
 
     }
 
+
+}}
+//document.addEventListener("keypress",function(event){
+    //var cell = event.key
+//})
+function buttonAnimation(cell){
+    var activebutton = document.querySelector("."+cell)
+    activebutton.classList.add("pressed")      //adding class to my html code 
+
+setTimeout(function(){
+    activebutton.classList.remove("pressed")      //removig class from my html code and by this it is making an animation
+},100)
 
 }
